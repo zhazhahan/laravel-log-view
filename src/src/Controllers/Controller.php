@@ -1,8 +1,8 @@
 <?php
 
-namespace Zha\LogViewer\Controllers;
+namespace Zha\LaravelLogView\Controllers;
 
-use Zha\LogViewer\LogViewerService;
+use Zha\LaravelLogView\LogViewerService;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
