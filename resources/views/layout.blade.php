@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@yield('log-viewer::title')</title>
-    <link href="./v2/css/tailwind.min.css" rel="stylesheet">
+    <link href="./plugins/laravel-log-view/log.css" rel="stylesheet">
 </head>
 
 <body>
