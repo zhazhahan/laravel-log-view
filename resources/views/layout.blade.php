@@ -28,14 +28,4 @@
         <!-- Footer -->
     </div>
 </body>
-<style>
-.bg{
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    background: radial-gradient(circle at 15% 50%, #ede9fe, rgba(255, 255, 255, 0) 25%), radial-gradient(circle at 85% 30%, #d8f3f6, rgba(255, 255, 255, 0) 25%);
-}
-</style>
 </html>

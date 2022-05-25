@@ -18,19 +18,7 @@
             </div>
         </a>
         <nav class="ml-auto flex flex-wrap items-center font-light justify-center">
-            <a class="border px-2 py-1 text-sm bg-white border rounded hover:bg-green-600 hover:text-white"  href="{{ route('log-viewer-download')}}?file={{ $service->getLogName() }}">{{ trans('log-viewer::log-viewer.info.download_label') }}</a>
-
-            <!-- <select class="border px-2 py-1 text-sm mr-2">
-                @foreach ($service->getAllLogs($keywords) as $log)
-                <option value="{{url('/showlog')}}?file={{$log}}" @if( $service->getLogName() == $log ) selected='selected' @endif>{{ucfirst($log)}}</option>
-                @endforeach
-            </select> -->
-            <!-- <select class="border px-2 py-1 text-sm">
-                <option class=" @if(!isset(request()['level'])) active @endif" href="{{url('/showlog')}}?file={{$service->getLogName()}}">All</option>
-                @foreach ( $service::getLevels() as $v)
-                <option class=" @if(isset(request()['level']) && request()['level'] == 'alert') active @endif" href="{{url('/showlog')}}?file={{$service->getLogName()}}&level=alert">{{ucfirst($v['name'])}}</option>
-                @endforeach
-            </select> -->
+            <a href="{{ route('log-viewer-download')}}?file={{ $service->getLogName() }}" class="hover:text-green-600">{{ trans('log-viewer::log-viewer.info.download_label') }}</a>
         </nav>
     </div>
 </header>
@@ -38,20 +26,18 @@
 
 
 <div class="max-w-6xl m-auto my-20">
-    <table class="bg-white mt-2 table-auto w-full text-left" style="word-break:break-all; word-wrap:break-all;">
+    <table class="bg-white mt-2 table-auto w-full text-left" style="word-break:break-all;word-wrap:break-all;">
         <tr>
             <th class="border p-2" width="9%">{{ trans('log-viewer::log-viewer.info.log_level') }}</th>
             <th class="border p-2" width="16%">{{ trans('log-viewer::log-viewer.info.log_datetime') }}</th>
             <th class="border p-2" width="75%">{{ trans('log-viewer::log-viewer.info.log_content') }}</th>
         </tr>
         @foreach ($service->getLogContents() as $content)
-            @if( !isset(request()['level']) || (isset(request()['level']) && request()['level'] == $content['level']) )
-            <tr class="">
-                <td  class="border p-2 {{ $service->getLevelColor($content['level']) }}"><b>{{ ucwords($content['level']) }}</b></td>
+            <tr class="bg-{{ $service->getLevelColor($content['level']) }} bg-opacity-5 text-{{ $service->getLevelColor($content['level']) }}">
+                <td class="border p-2 "><b>{{ ucwords($content['level']) }}</b></td>
                 <td class="border p-2">{{ $content['datetime'] }}</td>
                 <td class="border p-2">{{ $content['message'] }}</td>
             </tr>
-            @endif
         @endforeach
     </table>
 </div>

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\File;
 
 class HomeController extends Controller
 {
+
     /**
      * @param Request $request
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -14,17 +15,36 @@ class HomeController extends Controller
     public function home(Request $request)
     {
         if ($request->has('file')) {
+            // 设置文件
             $this->service->setLogPath($request->input('file'));
-            $viewName = 'detail';
-        } else {
-            $viewName = 'home';
-        }
 
-        return view($this->packageName .'::'. $viewName, [
-            'service'  => $this->service,
-            'keywords' => $request->input('keywords'),
-        ]);
+            // 返回
+            return view($this->packageName.'::info',[
+                'service'  => $this->service,
+            ]);
+        }else{
+
+            // 获取文件
+            $data = [];
+            $files = $this->service->getAllLogs();
+            foreach($files as $k=>$v){
+                $this->service->setLogPath($v);
+                $content = $this->service->getLogContents();
+                $temp = array_count_values(array_column($content,'level'));
+                $temp['sum'] = count($content);
+                $temp['name'] = $v;
+                $data[] = $temp;
+            }
+
+            // 返回
+            return view($this->packageName.'::home',[
+                'service'  => $this->service,
+                'files' => $data,
+                'levels' => $this->service->getLevels(),
+            ]);
+        }
     }
+
 
     /**
      * 文件下载
@@ -44,11 +64,6 @@ class HomeController extends Controller
      */
     public function delete(Request $request)
     {
-        $this->service->setLogPath($request->input('file'));
-        if (File::delete($this->service->getLogPath())) {
-            return ['status' => 'success', 'message' => trans($this->packageName . '::log-viewer.delete.success_message'), 'redirect' => route('home')];
-        }
-        return ['status' => 'fail', 'message' => trans($this->packageName . '::log-viewer.delete.success_fail')];
-    }
 
+    }
 }

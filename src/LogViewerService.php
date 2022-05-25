@@ -30,17 +30,33 @@ class LogViewerService
     const LOG_LEVEL_INFO      = 'info';
     const LOG_LEVEL_DEBUG     = 'debug';
 
+    // text-indigo-800
+    // text-pink-800
+    // text-red-500
+    // text-red-400
+    // text-yellow-500
+    // text-yellow-400
+    // text-blue-500
+    // text-green-500
 
+    // bg-indigo-800
+    // bg-pink-800
+    // bg-red-500
+    // bg-red-400
+    // bg-yellow-500
+    // bg-yellow-400
+    // bg-blue-500
+    // bg-green-500
 
     public static $levels = [
-        self::LOG_LEVEL_EMERGENCY => 'text-indigo-800',
-        self::LOG_LEVEL_ALERT     => 'text-pink-800',
-        self::LOG_LEVEL_CRITICAL  => 'text-red-500',
-        self::LOG_LEVEL_ERROR     => 'text-red-500',
-        self::LOG_LEVEL_WARNING   => 'text-yellow-500',
-        self::LOG_LEVEL_NOTICE    => 'text-yellow-400',
-        self::LOG_LEVEL_INFO      => 'text-blue-500',
-        self::LOG_LEVEL_DEBUG     => 'text-green-500',
+        self::LOG_LEVEL_EMERGENCY => 'indigo-800',
+        self::LOG_LEVEL_ALERT     => 'pink-800',
+        self::LOG_LEVEL_CRITICAL  => 'red-500',
+        self::LOG_LEVEL_ERROR     => 'red-400',
+        self::LOG_LEVEL_WARNING   => 'yellow-500',
+        self::LOG_LEVEL_NOTICE    => 'yellow-400',
+        self::LOG_LEVEL_INFO      => 'blue-500',
+        self::LOG_LEVEL_DEBUG     => 'green-500',
     ];
 
 
