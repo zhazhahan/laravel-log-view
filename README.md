@@ -18,8 +18,9 @@ composer require zha/laravel-log-view
 Zha\LaravelLogView\LogViewerServiceProvider::class,
 现在你已经可以通过访问`你的域名/showlog`进入log-viewer后台，
 
+
 ## 创建CSS
-php artisan vendor:publish --provider="Gouguoyin\LogViewer\LogViewerServiceProvider" --tag="log-viewer-public"
+php artisan vendor:publish --provider="Zha\LaravelLogView\LogViewerServiceProvider" --tag="log-viewer-public"
 
 
 
