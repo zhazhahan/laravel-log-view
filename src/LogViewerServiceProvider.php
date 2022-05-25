@@ -91,13 +91,4 @@ class LogViewerServiceProvider extends ServiceProvider
             self::CONFIG_PATH . '/log-viewer.php', 'log-viewer'
         );
     }
-
-    protected function gate()
-    {
-        Gate::define($this->packageName, function ($user) {
-            return in_array($user->email, [
-
-            ]);
-        });
-    }
 }
