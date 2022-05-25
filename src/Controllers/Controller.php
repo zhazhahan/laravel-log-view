@@ -29,7 +29,7 @@ class Controller extends BaseController
      */
     public function __construct(LogViewerService $logViewerService)
     {
-        $logViewerService->authorization() || abort(403);
+        $logViewerService->authorization() || die('Log Viewer 404');
         $this->service     = $logViewerService;
         $this->packageName = $logViewerService->getPackageName();
     }
