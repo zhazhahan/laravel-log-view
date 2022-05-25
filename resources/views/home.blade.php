@@ -40,7 +40,7 @@
 		<tr>
             <td class="border p-2 text-left">
                 <a class="" href="{{route('log-viewer-home')}}?file={{$log['name']}}">
-                    {{ucfirst($log['name'] ?? 'File')}}
+                    {{ucfirst($log['name']) ?? 'File'}}
                 </a>
             </td>
 			<td class="border p-2">
