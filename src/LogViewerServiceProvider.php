@@ -67,7 +67,7 @@ class LogViewerServiceProvider extends ServiceProvider
          */
         $this->publishes([
             self::PUBLIC_PATH => public_path('vendor/laravel-log-view'),
-        ], 'public');
+        ], 'log-viewer-public');
 
         /**
          * 发布服务提供者

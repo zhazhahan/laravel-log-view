@@ -18,13 +18,9 @@ composer require zha/laravel-log-view
 Zha\LaravelLogView\LogViewerServiceProvider::class,
 现在你已经可以通过访问`你的域名/showlog`进入log-viewer后台，
 
-## 自定义Log Viewer
-运行`php artisan vendor:publish --provider="Zha\LaravelLogView\LogViewerServiceProvider"`会一次性生成服务提供者文件
+## 创建CSS
+php artisan vendor:publish --provider="Gouguoyin\LogViewer\LogViewerServiceProvider" --tag="log-viewer-public"
 
 
-## 权限验证
-Log Viewer默认路由是 `/logs`， 默认情况下，只能在 `local` 环境下访问。
-在  `app/Providers/LogViewerServiceProvider.php` 文件中，有一个 `gate` 方法。
-这里授权控制 非本地 环境中的访问。 
-你可以根据需要随意修改此门面，以限制对 Log Viewer 的访问：
+
 
