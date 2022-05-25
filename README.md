@@ -8,13 +8,13 @@ Laravel Log Viewer
 
 ## 安装
 
-### 1.安装包
+1.安装包
 
 ```php
 composer require zha/laravel-log-view
 ```
 
-### 2.创建CSS
+2.创建CSS
 
 ```php
 php artisan vendor:publish --provider="Zha\LaravelLogView\LogViewerServiceProvider" --tag="log-viewer-public"
