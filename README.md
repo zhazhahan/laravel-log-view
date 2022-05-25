@@ -16,7 +16,7 @@ composer require zha/laravel-log-view
 在 `config/app.php` 的 `providers` 数组中加入
 
 Zha\LaravelLogView\LogViewerServiceProvider::class,
-现在你已经可以通过访问`你的域名/logs`进入log-viewer后台，
+现在你已经可以通过访问`你的域名/showlog`进入log-viewer后台，
 
 ## 自定义Log Viewer
 运行`php artisan vendor:publish --provider="Zha\LaravelLogView\LogViewerServiceProvider"`会一次性生成服务提供者文件

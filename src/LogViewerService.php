@@ -21,14 +21,36 @@ class LogViewerService
     /**
      * 日志等级
      */
-    const LOG_LEVEL_INFO      = 'info';
-    const LOG_LEVEL_ERROR     = 'error';
-    const LOG_LEVEL_NOTICE    = 'notice';
-    const LOG_LEVEL_WARNING   = 'warning';
-    const LOG_LEVEL_DEBUG     = 'debug';
-    const LOG_LEVEL_ALERT     = 'alert';
     const LOG_LEVEL_EMERGENCY = 'emergency';
+    const LOG_LEVEL_ALERT     = 'alert';
     const LOG_LEVEL_CRITICAL  = 'critical';
+    const LOG_LEVEL_ERROR     = 'error';
+    const LOG_LEVEL_WARNING   = 'warning';
+    const LOG_LEVEL_NOTICE    = 'notice';
+    const LOG_LEVEL_INFO      = 'info';
+    const LOG_LEVEL_DEBUG     = 'debug';
+
+
+
+    public static $levels = [
+        self::LOG_LEVEL_EMERGENCY => 'text-indigo-800',
+        self::LOG_LEVEL_ALERT     => 'text-pink-800',
+        self::LOG_LEVEL_CRITICAL  => 'text-red-500',
+        self::LOG_LEVEL_ERROR     => 'text-red-500',
+        self::LOG_LEVEL_WARNING   => 'text-yellow-500',
+        self::LOG_LEVEL_NOTICE    => 'text-yellow-400',
+        self::LOG_LEVEL_INFO      => 'text-blue-500',
+        self::LOG_LEVEL_DEBUG     => 'text-green-500',
+    ];
+
+
+    public static function getLevels(){
+        $data = [];
+        foreach ( self::$levels as $k => $v) {
+            $data[] = ['name'=>$k,'color'=>$v];
+        }
+        return $data;
+    }
 
     public function __construct()
     {
@@ -143,26 +165,6 @@ class LogViewerService
         return $logs;
     }
 
-    /**
-     * 获取日志等级图标
-     * @param $level
-     * @return mixed
-     */
-    public function getLevelIcon($level)
-    {
-        $icons = [
-            self::LOG_LEVEL_INFO      => 'fa-info-circle',
-            self::LOG_LEVEL_ERROR     => 'fa-times-circle',
-            self::LOG_LEVEL_NOTICE    => 'fa-question-circle',
-            self::LOG_LEVEL_WARNING   => 'fa-warning',
-            self::LOG_LEVEL_DEBUG     => 'fa-question-circle',
-            self::LOG_LEVEL_ALERT     => 'fa-info-circle',
-            self::LOG_LEVEL_CRITICAL  => 'fa-times-circle',
-            self::LOG_LEVEL_EMERGENCY => 'fa-warning',
-        ];
-
-        return $icons[strtolower($level)];
-    }
 
     /**
      * 获取日志等级颜色
@@ -171,18 +173,10 @@ class LogViewerService
      */
     public function getLevelColor($level)
     {
-        $icons = [
-            self::LOG_LEVEL_INFO      => 'text-success',
-            self::LOG_LEVEL_ERROR     => 'text-danger',
-            self::LOG_LEVEL_NOTICE    => 'text-warning',
-            self::LOG_LEVEL_WARNING   => 'text-warning',
-            self::LOG_LEVEL_DEBUG     => 'text-debug',
-            self::LOG_LEVEL_ALERT     => 'text-warning',
-            self::LOG_LEVEL_CRITICAL  => 'text-danger',
-            self::LOG_LEVEL_EMERGENCY => 'text-warning',
-        ];
-
-        return $icons[strtolower($level)];
+        if ( isset(self::$levels[$level]) ){
+            return self::$levels[$level];
+        }
+        return "";
     }
 
     /**

@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'web_route'         => 'logs', // 访问路由
-    'web_middleware'    => ['web', 'auth'], // 路由中间件
+    'web_route'         => '/showlog', // 访问路由
+    'web_middleware'    => [], // 路由中间件
     'web_navbar'        => [
         'Home'   => '/',
     ],
