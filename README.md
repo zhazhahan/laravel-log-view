@@ -25,3 +25,7 @@ php artisan vendor:publish --provider="Zha\LaravelLogView\LogViewerServiceProvid
 ```php
 composer remove zha/laravel-log-view
 ```
+
+```php
+rm -rf vendor/laravel-log-view
+```
