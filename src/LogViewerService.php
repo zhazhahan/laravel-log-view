@@ -185,7 +185,7 @@ class LogViewerService
      */
     public function authorization()
     {
-        return app()->environment('local') || Gate::allows($this->getPackageName());
+        return true;
     }
 
 }

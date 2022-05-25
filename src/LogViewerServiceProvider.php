@@ -94,11 +94,10 @@ class LogViewerServiceProvider extends ServiceProvider
 
     protected function gate()
     {
-        return true;
-        // Gate::define($this->packageName, function ($user) {
-        //     return in_array($user->email, [
+        Gate::define($this->packageName, function ($user) {
+            return in_array($user->email, [
 
-        //     ]);
-        // });
+            ]);
+        });
     }
 }
