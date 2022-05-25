@@ -15,8 +15,10 @@ composer require zha/laravel-log-view
 ```
 
 ### 2.创建CSS
-php artisan vendor:publish --provider="Zha\LaravelLogView\LogViewerServiceProvider" --tag="log-viewer-public"
 
+```php
+php artisan vendor:publish --provider="Zha\LaravelLogView\LogViewerServiceProvider" --tag="log-viewer-public"
+```
 
 ## 删除
 
