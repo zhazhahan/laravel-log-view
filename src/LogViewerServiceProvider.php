@@ -12,6 +12,7 @@ class LogViewerServiceProvider extends ServiceProvider
     const STUB_PATH   = __DIR__ . '/../stubs';
     const VIEW_PATH   = __DIR__ . '/../resources/views';
     const LANG_PATH   = __DIR__ . '/../resources/lang';
+    const PUBLIC_PATH   = __DIR__ . '/../public';
 
     protected $packageName;
 
@@ -60,6 +61,13 @@ class LogViewerServiceProvider extends ServiceProvider
         $this->publishes([
             self::LANG_PATH => resource_path('lang'),
         ], 'log-viewer-lang');
+
+        /**
+         * 发布CSS
+         */
+        $this->publishes([
+            self::PUBLIC_PATH => public_path('vendor/laravel-log-view'),
+        ], 'public');
 
         /**
          * 发布服务提供者
