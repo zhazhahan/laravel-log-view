@@ -1,0 +1,19 @@
+{
+    "name": "zha/laravel-log-view",
+    "description": "Laravel Log Viewer",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Zha\\LaravelLogView\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "韩炸炸",
+            "email": "vipmadu@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
