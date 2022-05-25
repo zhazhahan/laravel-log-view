@@ -27,5 +27,5 @@ composer remove zha/laravel-log-view
 ```
 
 ```php
-rm -rf vendor/laravel-log-view
+rm -rf public/vendor/laravel-log-view
 ```
