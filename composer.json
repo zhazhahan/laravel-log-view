@@ -1,6 +1,6 @@
 {
     "name": "zha/laravel-log-view",
-    "description": "Laravel Log Viewer",
+    "description": "Laravel Log Viewer 通过Web界面查看Laravel日志文件",
     "keywords":    ["laravel log-viewer", "log", "log viewer", "log-viewer", "logviewer"],
     "type": "laravel-package",
     "license": "MIT",

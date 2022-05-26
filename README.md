@@ -2,7 +2,7 @@
 
 ## 简介
 
-Laravel Log Viewer Laravel日志在线查看页面
+Laravel Log Viewer 通过Web界面查看Laravel日志文件
 
 
 
