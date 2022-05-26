@@ -1,7 +1,8 @@
 {
     "name": "zha/laravel-log-view",
     "description": "Laravel Log Viewer",
-    "type": "project",
+    "keywords":    ["laravel log-viewer", "log", "log viewer", "log-viewer", "logviewer"],
+    "type": "laravel-package",
     "license": "MIT",
     "authors": [
         {
