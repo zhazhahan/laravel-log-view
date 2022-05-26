@@ -5,7 +5,7 @@
 Laravel Log Viewer 通过Web界面查看Laravel日志文件
 
 
-![image](https://github.com/zhazhahan/laravel-log-view/tree/main/public/preview.jpg)
+![image](https://raw.githubusercontent.com/zhazhahan/laravel-log-view/main/public/preview.jpg)
 
 
 
