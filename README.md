@@ -36,4 +36,4 @@ rm -rf public/vendor/laravel-log-view
 
 
 ## 打赏
-![image](https://crm.can-leading.cn/assets/img/zan.jpg =200x200)
+![image](https://crm.can-leading.cn/assets/img/zan.jpg){:height="200px" width="200px"}
