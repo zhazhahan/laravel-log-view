@@ -32,3 +32,8 @@ composer remove zha/laravel-log-view
 ```php
 rm -rf public/vendor/laravel-log-view
 ```
+
+
+
+## 打赏
+![image](https://crm.can-leading.cn/assets/img/zan.jpg)
