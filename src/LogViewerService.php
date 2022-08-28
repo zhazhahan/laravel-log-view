@@ -36,6 +36,8 @@ class LogViewerService
     // text-red-400
     // text-yellow-500
     // text-yellow-400
+    // text-yellow-700
+    // text-yellow-800
     // text-blue-500
     // text-green-500
 
@@ -53,8 +55,8 @@ class LogViewerService
         self::LOG_LEVEL_ALERT     => 'pink-800',
         self::LOG_LEVEL_CRITICAL  => 'red-500',
         self::LOG_LEVEL_ERROR     => 'red-400',
-        self::LOG_LEVEL_WARNING   => 'yellow-500',
-        self::LOG_LEVEL_NOTICE    => 'yellow-400',
+        self::LOG_LEVEL_WARNING   => 'yellow-800',
+        self::LOG_LEVEL_NOTICE    => 'yellow-700',
         self::LOG_LEVEL_INFO      => 'blue-500',
         self::LOG_LEVEL_DEBUG     => 'green-500',
     ];
