@@ -36,4 +36,4 @@ rm -rf public/vendor/laravel-log-view
 
 
 ## 打赏
-[去赞赏](https://crm.can-leading.cn/assets/img/zan.jpg)
+[👉去赞赏](https://crm.can-leading.cn/assets/img/zan.jpg)
