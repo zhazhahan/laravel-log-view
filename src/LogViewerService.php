@@ -47,6 +47,8 @@ class LogViewerService
     // bg-red-400
     // bg-yellow-500
     // bg-yellow-400
+    // bg-yellow-700
+    // bg-yellow-800
     // bg-blue-500
     // bg-green-500
 
