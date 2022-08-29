@@ -32,7 +32,7 @@
 			<th class="border px-2 py-3 text-gray-500">ALL</th>
             <!-- Level -->
             @foreach ( $levels as $ll )
-            <th class="border px-2 py-3 hidden-md text-{{$ll['color']}}">{{ucfirst($ll['name'])}}</th>
+            <th class="border px-2 py-3 hidden-md text-{{$ll['color']}}-500">{{ucfirst($ll['name'])}}</th>
             @endforeach
             <!-- Level -->
 		</tr>
@@ -44,14 +44,14 @@
                 </a>
             </td>
 			<td class="border p-2">
-                <a class="hover:text-green-600" href="{{route('log-viewer-home')}}?file={{$log['name']}}">
+                <a class="hover:text-green-500" href="{{route('log-viewer-home')}}?file={{$log['name']}}">
                     {{$log['sum'] ?? 0}}
                 </a>
             </td>
             <!-- Level -->
             @foreach ( $levels as $ll )
-			<td class="border p-2 text-gray-200 @if(isset($log[$ll['name']])) text-white bg-{{$ll['color']}} @endif">
-                <a class="" href="{{route('log-viewer-home')}}?file={{$log['name']}}">
+			<td class="border p-2 @if(isset($log[$ll['name']]))  bg-{{$ll['color']}}-50 text-{{$ll['color']}}-800 @else text-white @endif">
+                <a class="" href="{{route('log-viewer-home')}}?file={{$log['name']}}&level={{$ll['name']}}">
                     {{ $log[$ll['name']] ?? 0 }}
                 </a>                     
             </td>

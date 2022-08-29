@@ -33,11 +33,13 @@
             <th class="border p-2" width="75%">{{ trans('log-viewer::log-viewer.info.log_content') }}</th>
         </tr>
         @foreach ($service->getLogContents() as $content)
-            <tr class="bg-{{ $service->getLevelColor($content['level']) }} bg-opacity-5 text-{{ $service->getLevelColor($content['level']) }}">
+            @if( !isset($_GET['level']) || $_GET['level'] == $content['level'] )
+            <tr class="bg-{{ $service->getLevelColor($content['level']) }}-100 hover:bg-opacity-60 bg-opacity-10 text-{{ $service->getLevelColor($content['level']) }}-500">
                 <td class="border p-2 "><b>{{ ucwords($content['level']) }}</b></td>
                 <td class="border p-2">{{ $content['datetime'] }}</td>
                 <td class="border p-2">{{ $content['message'] }}</td>
             </tr>
+            @endif
         @endforeach
     </table>
 </div>
