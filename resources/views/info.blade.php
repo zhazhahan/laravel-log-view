@@ -35,9 +35,9 @@
         @foreach ($service->getLogContents() as $content)
             @if( !isset($_GET['level']) || $_GET['level'] == $content['level'] )
             <tr class="bg-{{ $service->getLevelColor($content['level']) }}-100 hover:bg-opacity-60 bg-opacity-10 text-{{ $service->getLevelColor($content['level']) }}-500">
-                <td class="border p-2 "><b>{{ ucwords($content['level']) }}</b></td>
-                <td class="border p-2">{{ $content['datetime'] }}</td>
-                <td class="border p-2">{{ $content['message'] }}</td>
+                <td class="border p-2 align-top uppercase"><b>{{ $content['level'] }}</b></td>
+                <td class="border p-2 align-top">{{ $content['datetime'] }}</td>
+                <td class="border p-2 align-top">{{ $content['message'] }}</td>
             </tr>
             @endif
         @endforeach
