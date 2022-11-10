@@ -26,6 +26,7 @@
 
 
 <div class="max-w-6xl m-auto my-20">
+    <div class="mx-2">
     <table class="bg-white mt-2 table-auto w-full text-left" style="word-break:break-all;word-wrap:break-all;">
         <tr>
             <th class="border p-2" width="9%">{{ trans('log-viewer::log-viewer.info.log_level') }}</th>
@@ -42,5 +43,6 @@
             @endif
         @endforeach
     </table>
+    </div>
 </div>
 @endsection
