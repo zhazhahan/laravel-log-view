@@ -47,20 +47,18 @@ class LogViewerService
     // bg-red-400
     // bg-yellow-500
     // bg-yellow-400
-    // bg-yellow-700
-    // bg-yellow-800
     // bg-blue-500
     // bg-green-500
 
     public static $levels = [
-        self::LOG_LEVEL_EMERGENCY => 'indigo-800',
-        self::LOG_LEVEL_ALERT     => 'pink-800',
-        self::LOG_LEVEL_CRITICAL  => 'red-500',
-        self::LOG_LEVEL_ERROR     => 'red-400',
-        self::LOG_LEVEL_WARNING   => 'yellow-800',
-        self::LOG_LEVEL_NOTICE    => 'yellow-700',
-        self::LOG_LEVEL_INFO      => 'blue-500',
-        self::LOG_LEVEL_DEBUG     => 'green-500',
+        self::LOG_LEVEL_EMERGENCY => 'indigo',
+        self::LOG_LEVEL_ALERT     => 'violet',
+        self::LOG_LEVEL_CRITICAL  => 'rose',
+        self::LOG_LEVEL_ERROR     => 'red',
+        self::LOG_LEVEL_WARNING   => 'yellow',
+        self::LOG_LEVEL_NOTICE    => 'orange',
+        self::LOG_LEVEL_INFO      => 'cyan',
+        self::LOG_LEVEL_DEBUG     => 'green',
     ];
 
 

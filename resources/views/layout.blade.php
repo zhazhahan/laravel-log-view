@@ -16,15 +16,10 @@
 
         <!-- Footer -->
         <footer class="pt-20 text-gray-600 body-font">
-            <div class="max-w-6xl m-auto border-t py-4 flex flex-row">
-                <p class="text-gray-500 text-sm text-center sm:text-left">
-                    © 2020 韩炸炸
+            <div class="max-w-6xl m-auto border-t py-4 ">
+                <p class="text-gray-500 text-sm text-center">
+                    © 2020 <a href="https://twitter.com/imfeiwu" class="hover:text-green-600">@韩炸炸</a>
                 </p>
-                <span class="ml-auto">
-                    <a href="https://tailwindui.com">
-                        <img width="140" src="https://vitejs.dev/tailwind-labs.svg">
-                    </a>
-                </span>
             </div>
         </footer>
         <!-- Footer -->
