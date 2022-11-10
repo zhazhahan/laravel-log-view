@@ -4,9 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@yield('log-viewer::title')</title>
-    <link href="./vendor/laravel-log-view/log.css" rel="stylesheet">
-
-
+    <link href="/vendor/laravel-log-view/log.css" rel="stylesheet">
+    <style type="text/css">
+        .bg {
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            background: radial-gradient(circle at 15% 50%, #ede9fe, rgba(255, 255, 255, 0) 25%), radial-gradient(circle at 85% 30%, #d8f3f6, rgba(255, 255, 255, 0) 25%);
+        }
+    </style>
 </head>
 
 <body>
