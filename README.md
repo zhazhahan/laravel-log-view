@@ -1,29 +1,29 @@
 # Laravel Log Viewer
 
-## 简介
+## Info
 
-Laravel Log Viewer 通过Web界面查看Laravel日志文件
+Laravel Log Viewer View Logs By Web
 
 
 ![image](https://raw.githubusercontent.com/zhazhahan/laravel-log-view/main/public/preview.jpg)
 
 
 
-## 安装
+## Install
 
-1.安装包
+1.Composer Install
 
 ```php
 composer require zha/laravel-log-view
 ```
 
-2.创建CSS
+2.Create CSS
 
 ```php
 php artisan vendor:publish --provider="Zha\LaravelLogView\LogViewerServiceProvider" --tag="log-viewer-public"
 ```
 
-## 删除
+## Delete
 
 ```php
 composer remove zha/laravel-log-view
@@ -35,5 +35,5 @@ rm -rf public/vendor/laravel-log-view
 
 
 
-## 打赏
-[👉微信赞赏码](https://crm.can-leading.cn/assets/img/zan.jpg)
+## Donate
+[👉Wechat](https://crm.can-leading.cn/assets/img/zan.jpg)
