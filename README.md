@@ -2,7 +2,7 @@
 
 ## Info
 
-View Logs By Web
+Look Over Logs By Web
 
 
 ![image](https://raw.githubusercontent.com/zhazhahan/laravel-log-view/main/public/preview.jpg)
