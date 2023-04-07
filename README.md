@@ -1,5 +1,11 @@
 # Laravel Log Viewer
 
+
+## Chart
+
+![Alt](https://repobeats.axiom.co/api/embed/2c924ee8f576da3575bcf7c23f6c0a9279c701bb.svg "Repobeats analytics image")
+
+
 ## Info
 
 Look Over Logs By Web
